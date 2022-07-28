@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>two</title>
+</head>
+<body>
+<button id="btn">ajax按钮</button>
+<script>
+
+    function sendAJAX(URL){
+        return new Promise((resolve, reject)=>{
+            let xhr=new XMLHttpRequest();
+            xhr.open('GET', URL);
+            xhr.setRequestHeader('Access-Control-Allow-Origin', "*");
+            xhr.setRequestHeader('Access-Control-Allow-Method','POST,GET');
+            xhr.send();
+            xhr.onreadystatechange=function (){
+                if(xhr.readyState===4){
+                    if(xhr.status<300 && xhr.status<=200){
+                        resolve(xhr.response);
+                    }else{
+                        reject(xhr.status);
+                    }
+                }
+            }
+        });
+    }
+
+    async function my_ajax(URL){
+        try{
+            let p= await sendAJAX(URL);
+            console.log(p);
+        }catch (e){
+            console.log(e);
+        }
+    }
+
+    let btn= document.querySelector('#btn');
+    btn.addEventListener('onclick', my_ajax("./one.html"));
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Promise.myall=function (array){
+        let n=0;
+        let result=[];
+        return new Promise(function (resolve, reject){
+            for(let i=0;i<array.length;i++){
+                array[i].then(res=>{
+                    result.push(res);
+                    n++;
+                    if(n==array.length){
+                        resolve(result);
+                    }
+                }).catch(err=>{reject(err)})
+            }
+        })
+    }
+
+    let p1=new Promise(function (resolve, reject){
+        resolve('OK');
+    });
+
+    let p2=new Promise(function (resolve, reject){
+        resolve('OK2');
+    })
+
+    Promise.myall([p1, p2]).then((res)=>{
+        console.log(res);
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="debounce"/>
+<button id="btn">节流</button>
+<script>
+    let info =document.querySelector("#debounce");
+    let btn=document.querySelector("#btn");
+
+    function Debounce(callback, duration){
+        let timer=null;
+        return function run(e){
+            if(timer!==null){
+                clearTimeout(timer);
+            }
+            timer=setTimeout(()=>{
+                callback(e);
+            }, duration)
+            }
+    }
+
+    function callback(e){
+        console.log(e.target.value);
+    }
+
+
+    function slowly(callback, duration){
+        let state=false;
+        return function run(){
+            if(state){
+                return;
+            }
+            callback();
+            state=true;
+            setTimeout(()=>{
+                state=false;
+            },duration);
+        }
+    }
+
+    function sayHello(){
+        console.log('hello');
+    }
+
+    info.oninput=Debounce(callback, 500);
+    btn.onclick=slowly(sayHello, 500);
+</script>
+</body>
+</html>
