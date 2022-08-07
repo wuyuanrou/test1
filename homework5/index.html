@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./index.js"></script>
+    <!--/>
+    <script type="module" src="./my_mongodb.js"></script>
+    <script type="module" src="model.js"></script>
+    <!-->
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="container">
+    <div class="head">
+        My To Do List
+        <div class="add_thing">
+            <input type="text" placeholder="记录一下" id="newThing">
+            <button id="btn" onclick="add()">Add</button>
+        </div>
+    </div>
+    <div class="body">
+        <ul id="things">
+            <li>
+                搬砖
+                <button class="delete">删除</button>
+            </li>
+            <li>
+                玩耍
+                <button class="delete">删除</button>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

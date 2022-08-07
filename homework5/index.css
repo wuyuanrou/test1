@@ -1,0 +1,59 @@
+.head{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: pink;
+    text-align: center;
+
+    padding: 50px 50px 50px 50px;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/*.add_thing{
+    background-color: skyblue;
+}*/
+
+input{
+    height: 70%;
+    width: 60%;
+    border: pink solid;
+    border-radius: 20px 0 0px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: gray;
+
+    padding-left: 10px;
+}
+
+#btn{
+    height: 70%;
+    width: 20%;
+    border: pink;
+    border-radius: 0px 20px 20px 0px;
+    background-color: palevioletred;
+    font-weight: bold;
+    font-size: 20px;
+    color: gray;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    background-color: skyblue;
+    font-size: 30px;
+    color: black;
+    content: "";
+
+    height: 80px;
+    border: black solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
