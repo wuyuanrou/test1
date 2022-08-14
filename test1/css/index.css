@@ -1,0 +1,86 @@
+#container{
+    /*background-color: pink;*/
+}
+
+#head{
+    background-color: black;
+
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+
+    height: 150px;
+}
+
+#todolist{
+    background-color: black;
+
+    margin-top: auto;/*没加之前，字体设置50px导致整个#head下移，发现文本的margin变成了50px，因此修改文本部分margin*/
+    margin-bottom: auto;
+}
+
+#user_container{
+    /*background-color: aqua;*/
+
+    color: black;
+    font-size: 5px;
+
+    float: left;
+}
+
+#user_container img{
+    border-radius: 50px;
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+}
+
+#user_page{
+    background-color: yellow;
+
+    visibility: hidden;
+}
+
+#head input{
+    height: 50px;
+    width: 500px;
+    font-size: 40px;
+}
+
+#head button{
+    height: 50px;
+    width: 80px;
+    vertical-align: middle;/*button里加文字后位置偏移*/
+}
+
+#mainBody{
+    background-color: lightgray;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title{
+    font-size: 30px;
+
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+#left{
+    background-color: white;
+
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#right{
+    background-color: white;
+
+    margin: 10px;
+    border-radius: 10px;
+}

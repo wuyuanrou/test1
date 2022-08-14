@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+</head>
+<!--/>
+todolist
+文本框里面输入内容，按下按钮就可以生成待办事项
+点击待办事项复选框，就可以把当前数据添加到已完成事项里面
+点击已完成事项复选框，就可以把当前数据添加到待办事项里面
+可以删除和编辑事项
+本页面刷新页面数据不会丢失（利用localstorage）
+<!-->
+<body>
+<div id="container">
+    <div id="head">
+        <div id="todolist">
+            todolist
+            <div  id="user_container" onmouseenter="page_on()" onmouseleave="page_off()">
+                <img src="../img/page_photo.jpg">
+                <div id="user_page">
+                    用户<span id="user_name"></span>
+                    <br>
+                    <a href="./login.html"> 退出登录</a>
+                </div>
+            </div>
+        </div>
+        <input type="text">
+        <button id="insert" onclick="Add()">添加</button>
+    </div>
+    <div id="mainBody">
+        <div id="left">
+            <p class="title">待办事项</p>
+            <ul id="doing">
+                <!--/>
+                <li>
+                    爬山
+                    <button class="edit">编辑</button>
+                    <button class="finish">完成</button>
+                    <button class="delete_doing">删除</button>
+                </li>
+                <!-->
+            </ul>
+        </div>
+        <div id="right">
+            <p class="title">已办事项</p>
+            <ul id="done">
+                <!--/>
+                <li>
+                    运动
+                    <button class="unfinish">未完成</button>
+                    <button class="delete_done">删除</button>
+                </li>
+                <!-->
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
