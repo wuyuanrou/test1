@@ -1,0 +1,184 @@
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu_board_container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.menu_board{
+    height: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
+
+.menu{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.menu li:hover{
+    color: #3398e3;
+}
+
+.cover{
+    position: relative;
+    height: 370px;
+}
+
+.cover img{
+    position: relative;
+    height: 370px;
+    width: 100%;
+}
+
+.apply_form{
+    /*
+    background-color: pink;
+     */
+
+    width: 1150px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    padding: 50px;
+}
+
+.form_board{
+    /*
+    background-color: skyblue;
+     */
+}
+
+.apply_btn{
+    background-color: #3994da;
+    width: 250px;
+    height: 60px;
+
+    color: white;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+
+.form_board{
+    border-bottom: 1px lightgray solid;
+}
+
+.first_row{
+    border-top: 2px black solid;
+}
+
+.row{
+    border-bottom: 1px lightgray solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 140px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.row input{
+    width: 540px;
+    height: 30px;
+    border: 1px lightgray solid;
+
+    color: black;
+    font-size: 15px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.row select{
+    width: 550px;
+    height: 35px;
+    border: 1px lightgray solid;
+
+    color: black;
+    font-size: 15px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.height_weight input{
+    width: 235px;
+}
+
+.addition{
+    color: gray;
+    font-size: 12px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border-bottom: 1px lightgray solid;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.text textarea{
+    height: 120px;
+
+    background-color: white;
+    border: 1px lightgray solid;
+    padding: 10px;
+
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.contract{
+    height: 120px;
+    width: inherit;
+    overflow-x: hidden;
+
+    background-color: white;
+    border: 1px lightgray solid;
+    padding: 10px;
+
+    color: gray;
+    font-size: 10px;
+}
+
+.bottom{
+    border-top: gray 1px solid;
+    height: 200px;
+    background-color: #cdcbcb;
+}

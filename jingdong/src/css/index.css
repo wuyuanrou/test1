@@ -1,0 +1,188 @@
+.menu_board{
+    background-color: black;
+    height: 60px;
+    width: 1000px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: lightgray;
+}
+
+#logo{
+    height: 50px;
+}
+
+ul{
+    list-style: none;
+    /*
+    ul有初始属性。所以每次有ul都要加上这个
+     */
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+}
+
+#menu{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_li{
+    position: relative;
+
+    text-align: center;
+    width: 200px;
+}
+
+.detail{
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+
+    width: 100%;
+
+    z-index: 20;
+
+    padding-top: 20px;
+}
+
+.detail li{
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.detail li:hover{
+    background-color: gray;
+}
+
+#right{
+    display: flex;
+}
+
+#lang{
+    /*background-color: skyblue;*/
+    width: 100px;
+}
+
+#lang a{
+    color: gray;
+    text-decoration: none;
+}
+
+#lang text:hover{
+    color: #2a86c9;
+}
+
+#media{
+    /*background-color: skyblue;*/
+    width: 80px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#media img{
+    height: 20px;
+}
+
+.pics{
+    height: 500px;
+}
+
+.pics{
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll{
+    position: relative;
+
+    background-color: pink;
+    width: 1000px;
+    height: 450px;
+
+    overflow: hidden;
+}
+
+.scroll a{
+    position: absolute;
+    z-index: 10;
+
+    /*
+    background-color: pink;
+     */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll a img{
+    width: 50px;
+}
+
+.arrow-right{
+    right: 0;
+}
+
+.scroll_images{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+}
+
+.scroll ul img{
+    float: left;
+
+    width: 1000px;
+    height: 450px;
+}
+
+.circle{
+    position: absolute;
+
+    list-style: none;
+    border-radius: 20px;
+    height: 50px;
+
+    z-index: 10;
+    bottom: 0;
+    /*居中*/
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 0;
+    line-height: 50px;
+}
+
+.circle li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    opacity: 0.8;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.circle .current{
+    background-color: white;
+}
+
+.bottom{
+    background-color: gray;
+    height: 50px;
+}

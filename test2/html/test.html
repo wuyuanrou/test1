@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h1>艺人信息</h1>
+
+        <button @click="student.age++">年龄+1</button>
+        <button @click="addSex">添加性别，默认男</button>
+        <button @click="student.sex='未知'">修改性别</button>
+        <button @click="addFriend">添加一个朋友</button><!--对象添加-->
+        <button @click="updateFirstFriendName">修改第一个朋友的名字</button><!--修改对象-->
+        <button @click="addHobby">添加一个爱好</button><!--数组添加-->
+        <button @click="updateFirstHobby">修改第一个爱好为啦啦</button><!--修改数组-->
+        <h3>姓名：{{student.name}}</h3>
+        <h3 v-if="student.sex">性别：{{student.sex}}</h3><!--如果是undefined不会展示-->
+        <h3>年龄：{{student.age}}</h3>
+        <h3>爱好：</h3>
+        <ul>
+            <li v-for="(h, index) in student.hobby" :key="index">
+                {{h}}
+            </li>
+        </ul>
+        <h3>朋友们：</h3>
+        <ul>
+            <li v-for="(f, index) in student.friends" :key="index">
+                {{f.name}}-{{f.age}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    const vm=new Vue({
+        el: "#root",
+        data: {
+            student: {
+                name: '李旻浩',
+                age: 19,
+                hobby: ['唱','跳','rap'],
+                friends: [
+                    {name:'金昇玟', age: 18},
+                    {name:'韩知城', age: 18}
+                ]
+            }
+        },
+        methods: {
+            addSex(){
+                Vue.set(vm.student, "sex", "男")//添加数据
+            },
+
+            addFriend(){
+                this.student.friends.unshift({name:'徐彰彬', age: 20})
+            },
+
+            updateFirstFriendName(){
+                this.student.friends[0].name='黄铉辰'//数组第0项没有getter setter，但是里面的属性有
+            },
+
+            addHobby(){
+                this.student.hobby.unshift('啦啦')
+            },
+
+            updateFirstHobby(){
+                this.student.hobby.splice(0, 1, '啦啦')
+            }
+        },
+        computed: {
+
+        },
+        watch: {
+            
+        },
+    });
+</script>
+</html>

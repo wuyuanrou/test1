@@ -1,0 +1,152 @@
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu_board_container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.menu_board{
+    height: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
+
+.menu{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.menu li:hover{
+    color: #3398e3;
+}
+
+.cover{
+    position: relative;
+    height: 800px;
+}
+
+.cover img{
+    position: relative;
+    height: 700px;
+    width: 100%;
+}
+
+.slogan{
+    position: absolute;
+    top: 180px;
+    left: 150px;
+    z-index: 10;
+
+    width: 1000px;
+    line-height: 20px;
+
+    padding-left: 50px;
+}
+
+.first_slogan{
+    color: white;
+    font-size: 35px;
+}
+
+.second_slogan{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.third_slogan{
+    color: #2a86c9;
+    font-size: 45px;
+}
+
+.enter{
+    position: absolute;
+    z-index: 10;
+    right: 200px;
+    top: 650px;
+
+    background-color: #2a86c9;
+    width: 300px;
+    height: 130px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    color: white;
+    font-size: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enter:hover{
+    background-color: #1470a9;
+}
+
+.enter img{
+    width: 50px;
+}
+
+.info{
+    background-color: black;
+    width: 1200px;
+    height: 350px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.info div{
+    position: relative;
+    width: 100%;
+    height: 350px;
+
+    overflow: hidden;
+}
+
+.info_cover img{
+    position: absolute;
+    width: 100%;
+    height: 350px;
+
+    transition: all 0.6s linear;
+}
+
+.info_cover img:hover{
+    transform: scaleX(1.4) scaleY(1.4);
+    transition: all 0.6s linear;
+}
+
+
+.bottom{
+    border-top: gray 1px solid;
+    height: 200px;
+    background-color: #cdcbcb;
+}

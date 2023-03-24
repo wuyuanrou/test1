@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/apply.css">
+  <script src="../jquery.min.js"></script>
+  <script src="../js/apply.js"></script>
+    <title>YRW AUDITION</title>
+</head>
+<body>
+<div class="container">
+  <div class="cover">
+    <img src="../img/bird2.jpg">
+    <div class="menu_board_container">
+      <div class="menu_board">
+        <a href="../html/index.html"><img src="../img/icon_logo_blue.png" id="logo"></a>
+        <div>
+          <ul class="menu">
+            <li>AUDITION</li>
+            <li>ONLINE</li>
+            <li>OFFLINE</li>
+            <li>NOTICE</li>
+            <li>MY AUDITION</li>
+            <li>CN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="apply_form">
+    <p style="font-weight: bold;font-size: 30px">ONLINE AUDITION</p>
+    <div class="form_board">
+      <div>
+        <span style="font-weight: bold;font-size: 20px">1.必需信息</span>
+        <div class="first_row row">
+          <div>
+            <p>*姓名</p>
+            <input type="text" id="name">
+            <p id="name_addition"></p>
+          </div>
+          <div>
+            <p>*电子邮件</p>
+            <input type="email" id="email">
+            <p id="email_addition"></p>
+          </div>
+        </div>
+      <div class="row">
+        <div>
+          <p>*密码</p>
+          <input type="text" id="password">
+          <p class="addition" id="password_addition">*10字符以上，需包含数字、英文、符号。</p>
+        </div>
+        <div>
+          <p>*确认密码</p>
+          <input type="text" id="ensure_password">
+          <p class="addition" id="ensure_password_addition">*10字符以上，需包含数字、英文、符号。</p>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <p>*国籍</p>
+          <select id="nation">
+            <option>选择</option>
+            <option>中国</option>
+            <option>美国</option>
+            <option>韩国</option>
+          </select>
+          <p id="nation_addition"></p>
+        </div>
+        <div>
+          <p>*出生日期</p>
+          <input type="text" id="birthday">
+          <p class="addition" id="birthday_addition">E.G."2003-08-15"</p>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <p>*性别</p>
+          <select id="sex">
+            <option>选择</option>
+            <option>男</option>
+            <option>女</option>
+          </select>
+          <p id="sex_addition"></p>
+        </div>
+        <div>
+          <p>*身高/体重</p>
+          <div class="height_weight">
+            <input type="text" id="height">
+            <span>cm</span>
+            <input type="text" id="weight">
+            <span>kg</span>
+          </div>
+          <p id="height_addition"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <p>*音源</p>
+          <input type="file">
+        </div>
+        <div>
+          <p>*视频</p>
+          <input type="file">
+        </div>
+      </div>
+      <div class="text">
+        <p>自我介绍</p>
+        <textarea placeholder="请填写 自我介绍/个人经历/爱好/特长 等" id="self_intro"></textarea>
+      </div>
+    </div>
+    <div class="form_board">
+      <span style="font-weight: bold;font-size: 20px">2.条款同意</span>
+      <span style="font-size: 5px;color: gray">为成功报名，请同意使用条款及个人情报收集与使用条款。</span>
+      <div class="first_row">
+        <p>使用条款</p>
+        <div class="contract">
+          <p>条款</p>
+          <p>条款</p>
+          <p>条款</p>
+          <p>条款</p>
+          <p>条款</p>
+          <p>条款</p>
+          <p>条款</p>
+          <p>条款</p>
+        </div>
+        <input type="checkbox">同意
+      </div>
+    </div>
+  </div>
+</div>
+  <a href="JavaScript:;"><div class="apply_btn" id="apply_btn">报名</div></a>
+  <div class="bottom"></div>
+</div>
+</body>
+</html>

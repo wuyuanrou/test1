@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <form @submit.prevent="demo">
+            账号：<input type="text" v-model.trim="userInfo.account"><br/>
+            密码：<input type="password" v-model="userInfo.password"><br/>
+            性别：<br/>
+            男<input type="radio" name="sex" v-mode="userInfo.sex" value="male">
+            女<input type="radio" name="sex" v-model="userInfo.sex" value="female"><br/>
+            年龄<input type="number" v-model.number="userInfo.age" value="age"><br/>
+            兴趣：<br/>
+            学习<input type="checkbox" v-model="userInfo.hobby" value="study">
+            打游戏<input type="checkbox" v-model="userInfo.hobby" value="game">
+            吃饭<input type="checkbox" v-model="userInfo.hobby" value="eat"><br/>
+            所属公司<br/>
+            <select v-model="userInfo.company">
+                <option value="">请选择公司</option>
+                <option value="sm">SM</option>
+                <option value="yg">YG</option>
+                <option value="jyp">JYP</option>
+                <option value="hybe">HYBE</option>
+            </select><br/>
+            其他信息：<br/>
+            <textarea v-model.lazy="userInfo.other"></textarea><br/>
+            <input type="checkbox" v-model="userInfo.agree">阅读并接受<a hred="#"></a><br/>
+            <button>提交</button>
+        </form>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#root",
+        data: {
+            userInfo:{
+                account: "",
+                password: "",
+                age: 0,
+                sex: "female",
+                hobby:[],//如果是字符串，收集的就是checked是否勾选。同时checked值又会影响其他多选元素（全选），所以要用数组
+                company: "sm",
+                other: "",
+                agree: "",
+            }
+        },
+        methods:{
+            demo(){
+                console.log(JSON.stringify(this.userInfo))
+            }
+        }
+    })
+</script>
+</html>

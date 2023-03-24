@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        {{msg}}
+    </div>
+</body>
+<script type="text/javascript">
+
+    const student=Vue.extend({
+        name: 'student',
+        template:`
+            <div>
+                <h2>学生名称：{{name}}</h2>
+                <h2>学生年龄：{{age}}</h2>
+            </div>
+        `,
+        data(){
+            return {
+                name: '张三',
+                age: 18,
+            }
+        }
+    });
+
+    const school=Vue.extend({
+        template: `
+            <div>
+                <h2>学校名称：{{name}}</h2>
+                <h2>学校地址：{{address}}</h2>
+                <student></student>
+            </div>
+        `,
+        data(){
+            return {
+                name: "Stanford",
+                address: "Seoul",
+            }
+        },
+        components:{
+            student: student,
+        }
+    });
+
+    //用来管理所有组件，一人（vm）之下，万人之上
+    const app=Vue.extend({
+        template: `
+            <div>
+                <school></school>
+            </div>
+        `,
+        components:{
+            school,
+        }
+    });
+
+    const vm=new Vue({
+        template:`
+            <div>
+                <app></app>
+            </div>
+        `,
+        el: "#root",
+        data: {
+            msg: '欢迎学yue',
+        },
+        components:{
+            app
+        }
+    })
+</script>
+</html>

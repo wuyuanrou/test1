@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="./index.js"></script>
     <!--/>
     <script type="module" src="./my_mongodb.js"></script>
     <script type="module" src="model.js"></script>
     <!-->
     <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script><!--如果要把js文件写到前面，需要把js函数绑定事件，否则会失效没反应-->
 </head>
 <body>
 <div class="container">
@@ -20,14 +20,14 @@
         </div>
     </div>
     <div class="body">
-        <ul id="things">
+        <ul>
             <li>
                 搬砖
-                <button class="delete">删除</button>
+                <button class="d">删除</button>
             </li>
             <li>
                 玩耍
-                <button class="delete">删除</button>
+                <button class="d">删除</button>
             </li>
         </ul>
     </div>

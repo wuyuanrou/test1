@@ -1,0 +1,190 @@
+.menu_board{
+    background-color: black;
+    height: 60px;
+    width: 1000px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: lightgray;
+}
+
+#logo{
+    height: 50px;
+}
+
+ul{
+    list-style: none;
+    /*
+    ul有初始属性。所以每次有ul都要加上这个
+     */
+    margin: 0;
+    padding: 0;
+}
+
+input:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#menu{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu a{
+    color: gray;
+}
+
+.menu_li{
+    position: relative;
+
+    text-align: center;
+    width: 200px;
+}
+
+.detail{
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+
+    width: 100%;
+
+    z-index: 20;
+
+    padding-top: 20px;
+}
+
+
+.detail li{
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.detail li:hover{
+    background-color: gray;
+}
+
+#right{
+    display: flex;
+}
+
+#lang{
+    /*background-color: skyblue;*/
+    width: 100px;
+}
+
+#lang a{
+    color: gray;
+    text-decoration: none;
+}
+
+#lang text:hover{
+    color: #2a86c9;
+}
+
+#media{
+    /*background-color: skyblue;*/
+    width: 80px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#media img{
+    height: 20px;
+}
+
+.title_container{
+
+    background-color: #ece9e9;
+
+    padding: 20px;
+    height: 200px;
+
+}
+
+.title{
+    margin-left: 300px;
+    /*
+    transform: translateY(50%);
+    background-color: #2a86c9;
+     */
+    height: 200px;
+    font-weight: bold;
+    font-size: 50px;
+
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.content{
+    display: flex;
+}
+
+.article{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    width: 100%;
+
+    text-align: center;
+    margin-right: 250px;
+}
+
+.search div{
+    width: 500px;
+    height: 30px;
+    border: lightgray 1px solid;
+
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 10px;
+}
+
+.search input{
+    width: 430px;
+    height: inherit;
+    border: none;
+
+    font-size: 20px;
+}
+
+.search img{
+    height: 30px;
+}
+
+.catalog{
+    width: 250px;
+    padding: 100px 30px 100px 100px;
+}
+
+.catalog ul{
+    border-right: 2px gray solid;
+}
+
+.catalog a{
+    color: black;
+}
+
+.catalog a:hover{
+    color: #2a86c9;
+}
+
+.bottom{
+    background-color: gray;
+    height: 50px;
+}
